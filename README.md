@@ -1,4 +1,4 @@
-﻿# js-apis-Alexis-Bally
+# js-apis-Alexis-Bally
 
 When you first come in the website, you will obviously see all the animes that are display. 
 If you click on one, everything will disappear and more informations on the anime you clicked and quotes from the same anime will appear instead.
