@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+select {
+    background-color: rgb(0, 0, 138);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    background-color: rgb(0, 0, 138);
+    border: none;
+    border-radius: 50%;
+}
+
+#page1 {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.rightbutton {
+    right: 20px;
+}
+
+.leftbutton{
+    left: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 6vh;
+}
+
+#allAnimes {
+    margin: 10px;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.divEachAnime {
+    border: solid 8px rgb(0, 0, 202);
+    border-radius: 25px;
+}
+
+.text {
+    margin: 10px 5%;
+}
+
+.text h3 {
+    text-decoration: underline;
+}
+
+.text h2 {
+    margin: 10px 5%;
+}
+
+#anime {
+    margin: 30px;
+}
+
+.infosAnime {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.image {
+    width: 30%;
+    height: 100%;
+}
+
+.imgAnime {
+    border-radius: 25px;
+    width: auto;
+    height: 100%;
+}
+
+.textcontainer {
+    width: 60%;
+}
+
+.textcontainer .text {
+    margin-left: 0;
+}
+
+.episodes {
+    margin-top: 20px;
+}
+
+.synopsis {
+    margin-top: 20px;
+}
+
+.divquote {
+    background-color: rgb(0, 0, 138);
+    border-radius: 35px;
+    padding: 4%;
+}
+
+.divquote h2 {
+    width: 250px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.divcontainer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: solid 2px white;
+}
+
+.divcontainer h3 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.divcontainer p {
+    margin-left: 20px;
+}
+
+
+@media (max-width: 1500px) {
+    #allAnimes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #allAnimes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
