@@ -9,6 +9,7 @@ let pagenumber = 1
 function getAnimes() {
 
     divAllAnimes.innerHTML = ''
+    document.querySelector('#errorMessage').innerHTML = ""
 
     fetch('https://api.jikan.moe/v4/anime?page=1&limit=25&type=tv&sfw=false')
     .then(response => response.json())
@@ -52,6 +53,7 @@ function clickAnime() {
 
             var animeId = element.dataset.id
             divAnimes.innerHTML = ''
+            document.querySelector('#errorMessage').innerHTML = ""
 
             fetch('https://api.jikan.moe/v4/anime/' + animeId)
             .then(response => response.json())
@@ -133,6 +135,7 @@ function rightButton() {
         console.log(pagenumber)
 
         divAllAnimes.innerHTML = ''
+        document.querySelector('#errorMessage').innerHTML = ""
 
         fetch('https://api.jikan.moe/v4/anime?page=' + pagenumber + '&limit=25&type=tv&sfw=false&genres=' + id)
         .then(response => response.json())
@@ -148,6 +151,8 @@ function rightButton() {
                 document.querySelector('#errorMessage').innerHTML = `
                 <h2>There are no more Animes of this genre</h2>
                 `
+            } else {
+                document.querySelector('#errorMessage').innerHTML = ""
             }
 
             console.log(response.data)
@@ -185,6 +190,7 @@ function leftButton() {
         console.log(pagenumber)
 
         divAllAnimes.innerHTML = ''
+        document.querySelector('#errorMessage').innerHTML = ""
 
         fetch('https://api.jikan.moe/v4/anime?page=' + pagenumber + '&limit=25&type=tv&sfw=false&genres=' + id)
         .then(response => response.json())
